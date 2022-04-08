@@ -3,7 +3,7 @@ package com.kk.codetest.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.kk.codetest.R
-import com.kk.codetest.ui.main.MenuFragment
+import com.kk.codetest.ui.menu.MenuFragment
 
 class MainActivity : AppCompatActivity() {
 

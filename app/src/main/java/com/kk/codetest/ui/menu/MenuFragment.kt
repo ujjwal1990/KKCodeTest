@@ -1,4 +1,4 @@
-package com.kk.codetest.ui.main
+package com.kk.codetest.ui.menu
 
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
