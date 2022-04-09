@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Typography-->
+    <style name="KKTextBebasNenuBase">
+        <item name="fontFamily">@font/bebas_neue</item>
+        <item name="android:fontFamily">@font/bebas_neue</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineSpacingExtra">-11sp</item>
+    </style>
+
+    <style name="KKTextLatoBase">
+        <item name="fontFamily">@font/lato</item>
+        <item name="android:fontFamily">@font/lato</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:translationY">-1.2sp</item>
+        <item name="android:lineHeight" tools:targetApi="p">18dp</item>
+    </style>
+
+    <style name="TextAppearance.KK.Headline1" parent="KKTextBebasNenuBase">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/menu_card_h1_text</item>
+    </style>
+
+    <style name="TextAppearance.KK.Headline2" parent="KKTextBebasNenuBase">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/menu_card_h2_text</item>
+    </style>
+
+    <style name="TextAppearance.KK.ToolBarTitleText" parent="KKTextBebasNenuBase">
+        <item name="android:textColor">@color/medium_black</item>
+        <item name="android:textSize">@dimen/menu_toolbar_title_text</item>
+        <item name="android:lineSpacingExtra">1sp</item>
+        <item name="android:translationY">-0.6sp</item>
+    </style>
+
+
+    <style name="TextAppearance.KK.Body1" parent="KKTextLatoBase">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="TextAppearance.KK.ButtonText" parent="KKTextLatoBase">
+        <item name="fontFamily">@font/lato_bold</item>
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+</resources>

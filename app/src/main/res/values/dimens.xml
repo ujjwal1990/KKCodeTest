@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Text sizes t-shirts naming starts-->
+    <dimen name="text_small">13sp</dimen>
+    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_large">20sp</dimen>
+    <dimen name="text_xlarge">24sp</dimen>
+    <dimen name="menu_card_h1_text">39sp</dimen>
+    <dimen name="menu_card_h2_text">29sp</dimen>
+    <dimen name="menu_toolbar_title_text">19sp</dimen>
+    <!--Text sizes t-shirts naming ends-->
+
+    <!--Padding/Margins naming starts-->
+    <dimen name="spacing_tiny">4dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="spacing_xlarge">64dp</dimen>
+    <!--Padding/Margins naming ends-->
+
+    <!--dimens for views-->
+    <dimen name="button_radius">64dp</dimen>
+    <dimen name="profile_border_thickness">5dp</dimen>
+</resources>
