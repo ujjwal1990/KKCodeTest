@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menuCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/spacing_medium"
+    android:layout_marginTop="@dimen/spacing_small"
+    android:layout_marginEnd="@dimen/spacing_medium"
+    app:cardElevation="@dimen/size0"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardPreventCornerOverlap="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/spacing_small"
+        android:paddingEnd="@dimen/size0">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardLeftImage"
+            android:layout_width="@dimen/profile_pic_size"
+            android:layout_height="@dimen/profile_pic_size"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:background="@drawable/warning_ring"
+            android:padding="@dimen/profile_border_thickness"
+            app:layout_constraintBottom_toTopOf="@id/cardLargeButton"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cardTitle"
+            android:layout_width="@dimen/size0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_large"
+            android:textAppearance="?attr/textAppearanceHeadline1"
+            android:translationZ="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/cardLeftImage"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="COMPLETE \nYOUR PROFILE" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cardBodyText"
+            android:layout_width="@dimen/size0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:paddingBottom="@dimen/spacing_small"
+            android:textAppearance="?attr/textAppearanceBody1"
+            android:translationZ="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardLeftImage"
+            app:layout_constraintTop_toBottomOf="@id/cardTitle"
+            tools:text="Become a trusted member of the\nkommunity and start interacting" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cardSmallButton"
+            android:layout_width="@dimen/size0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_small"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:background="@drawable/warning_button_background"
+            android:textAppearance="@style/TextAppearance.KK.ButtonText"
+            app:backgroundTint="@null"
+            app:icon="@drawable/ic_warning"
+            app:iconGravity="textStart"
+            app:iconPadding="@dimen/spacing_small"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/cardLeftImage"
+            app:layout_constraintTop_toBottomOf="@id/cardBodyText"
+            tools:text="Verify now" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cardLargeButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_large"
+            android:layout_marginBottom="@dimen/spacing_large"
+            android:background="@drawable/action_button_background"
+            android:textAppearance="@style/TextAppearance.KK.ButtonText"
+            app:backgroundTint="@null"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardBodyText"
+            tools:text="Success!" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".30" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cardRightImage"
+            android:layout_width="@dimen/size0"
+            android:layout_height="@dimen/size0"
+            android:scaleType="fitEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gl1"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>
