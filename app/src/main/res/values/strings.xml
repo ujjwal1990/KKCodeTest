@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">KKCodeTest</string>
+    <string name="toolbar_title">ESSEXLAD</string>
+    <string name="toolbar_body">View and edit profile</string>
+    <string name="get_verified_title">GET VERIFIED</string>
+    <string name="get_verified_body">Become a trusted member of the\nkommunity and start interacting</string>
+    <string name="get_verified_action">Verify now</string>
+    <string name="complete_profile_title">COMPLETE YOUR\nPROFILE</string>
+    <string name="complete_profile_body">Take a few steps to show the\nkommunity who you really are</string>
+    <string name="complete_profile_action">Let\'s get it done</string>
+    <string name="complete_profile_success">Success!</string>
+    <string name="event_ticket_title">EVENTS \n&amp; E-TICKETS</string>
+    <string name="event_ticket_body">Buy and access your party\nand workshop tickets </string>
+    <string name="account_settings">ACCOUNT SETTING</string>
+    <string name="logout">LOGOUT</string>
 </resources>
