@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menuToolBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:layout_collapseMode="pin">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toolBarImage"
+            android:layout_width="@dimen/toolbar_pic_size"
+            android:layout_height="@dimen/toolbar_pic_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_user_profile" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/toolBarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:text="@string/toolbar_title"
+            android:textAppearance="@style/TextAppearance.KK.ToolBarTitleText"
+            app:layout_constraintStart_toEndOf="@id/toolBarImage"
+            app:layout_constraintTop_toTopOf="@id/toolBarImage" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/toolBarBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginTop="@dimen/spacing_tiny"
+            android:text="@string/toolbar_body"
+            android:textAppearance="?attr/textAppearanceBody1"
+            app:layout_constraintStart_toEndOf="@id/toolBarImage"
+            app:layout_constraintTop_toBottomOf="@id/toolBarTitle" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/toolBarClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/spacing_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_tool_bar_close" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.appcompat.widget.Toolbar>
