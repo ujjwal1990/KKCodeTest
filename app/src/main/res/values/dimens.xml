@@ -11,14 +11,21 @@
     <!--Text sizes t-shirts naming ends-->
 
     <!--Padding/Margins naming starts-->
+    <dimen name="size0">0dp</dimen>
     <dimen name="spacing_tiny">4dp</dimen>
     <dimen name="spacing_small">8dp</dimen>
     <dimen name="spacing_medium">16dp</dimen>
-    <dimen name="spacing_large">32dp</dimen>
-    <dimen name="spacing_xlarge">64dp</dimen>
+    <dimen name="spacing_large">20dp</dimen>
+    <dimen name="spacing_xlarge">24dp</dimen>
+    <dimen name="spacing_xxlarge">32dp</dimen>
+    <dimen name="spacing_xxxlarge">64dp</dimen>
     <!--Padding/Margins naming ends-->
 
     <!--dimens for views-->
+    <dimen name="divider_height">1dp</dimen>
     <dimen name="button_radius">64dp</dimen>
+    <dimen name="card_corner_radius">20dp</dimen>
     <dimen name="profile_border_thickness">5dp</dimen>
+    <dimen name="profile_pic_size">100dp</dimen>
+    <dimen name="toolbar_pic_size">50dp</dimen>
 </resources>
