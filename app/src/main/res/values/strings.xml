@@ -13,4 +13,5 @@
     <string name="event_ticket_body">Buy and access your party\nand workshop tickets </string>
     <string name="account_settings">ACCOUNT SETTING</string>
     <string name="logout">LOGOUT</string>
+    <string name="try_again">Try again</string>
 </resources>
