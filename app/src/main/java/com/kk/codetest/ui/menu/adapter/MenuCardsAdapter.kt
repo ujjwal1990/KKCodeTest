@@ -11,7 +11,10 @@ import com.kk.codetest.ui.menu.viewholder.MenuButtonViewHolder
 import com.kk.codetest.ui.menu.viewholder.MenuCardViewHolder
 import com.kk.codetest.ui.utils.CommonViewHolder
 
-class MenuCardsAdapter(private val menuListData: ArrayList<MenuListDataUiModel>) :
+class MenuCardsAdapter(
+    private val menuListData: ArrayList<MenuListDataUiModel>,
+    private val onItemClicked: (Int) -> Unit
+) :
     RecyclerView.Adapter<CommonViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CommonViewHolder {
@@ -21,7 +24,7 @@ class MenuCardsAdapter(private val menuListData: ArrayList<MenuListDataUiModel>)
                     LayoutInflater.from(parent.context),
                     parent,
                     false
-                )
+                ), onItemClicked
             )
         } else {
             MenuButtonViewHolder(

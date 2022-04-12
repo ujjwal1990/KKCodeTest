@@ -9,9 +9,7 @@ import androidx.core.content.ContextCompat
 import com.kk.codetest.R
 import com.kk.codetest.common.utils.Constants.Companion.EMPTY
 import com.kk.codetest.databinding.ViewCustomMenuCardBinding
-import com.kk.codetest.ui.utils.hide
-import com.kk.codetest.ui.utils.setVisibility
-import com.kk.codetest.ui.utils.show
+import com.kk.codetest.ui.utils.*
 
 //Custom cardview to manage the views inside it
 class MenuCardView constructor(context: Context, attrs: AttributeSet) :
@@ -78,6 +76,17 @@ class MenuCardView constructor(context: Context, attrs: AttributeSet) :
         }
     }
 
+    fun showProgressBar(isShow: Boolean) {
+        with(binding) {
+            if (isShow) invisibleViews(
+                cardTitle, cardBodyText, cardLeftImage, cardLargeButton, cardSmallButton,
+                cardRightImage
+            )
+            else showViews(cardTitle, cardBodyText, cardLeftImage, cardLargeButton)
+            binding.cardProgress.setVisibility(isShow)
+        }
+    }
+
     fun setCardTitle(cardTitle: String?) {
         binding.cardTitle.text = cardTitle ?: EMPTY
     }
@@ -131,6 +140,8 @@ class MenuCardView constructor(context: Context, attrs: AttributeSet) :
         binding.cardLargeButton.setVisibility(largeButtonVisibility)
     }
 
+    fun getLargeButtonView() = binding.cardLargeButton
+
     fun setLargeButtonType(buttonType: Int) {
         binding.cardLargeButton.background = when (buttonType) {
             CardButtonType.WARNING_BUTTON.ordinal -> ContextCompat.getDrawable(
@@ -148,7 +159,6 @@ class MenuCardView constructor(context: Context, attrs: AttributeSet) :
             else -> ContextCompat.getDrawable(context, R.drawable.action_button_background)
         }
     }
-
 
     fun setCardTitleTextAppearance(textAppearance: Int) {
         binding.cardTitle.setTextAppearance(textAppearance)
@@ -174,5 +184,9 @@ class MenuCardView constructor(context: Context, attrs: AttributeSet) :
 
     fun setCardBodyTextPadding(left: Int = 0, top: Int = 0, right: Int = 0, bottom: Int = 0) {
         binding.cardBodyText.setPadding(left, top, right, bottom)
+    }
+
+    fun setCardTitleTextPadding(left: Int = 0, top: Int = 0, right: Int = 0, bottom: Int = 0) {
+        binding.cardTitle.setPadding(left, top, right, bottom)
     }
 }

@@ -1,9 +1,12 @@
 package com.kk.codetest.ui.menu.models
 
+import com.kk.codetest.ui.menu.profile.ProfileCardState
+
 data class MenuCardUiModel(
-    val cardType: MenuCardType,
-    val cardTitleId: Int,
-    val cardBodyId: Int,
-    val cardButtonTextId: Int? = null,
-    val cardImage: Int
+    var cardType: MenuCardType,
+    var cardTitleId: Int,
+    var cardBodyId: Int,
+    var cardButtonTextId: Int? = null,
+    var cardImage: Int,
+    var profileCardUpdatedData: ProfileCardState? = null
 )
