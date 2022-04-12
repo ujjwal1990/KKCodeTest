@@ -8,9 +8,9 @@
     android:layout_marginStart="@dimen/spacing_medium"
     android:layout_marginTop="@dimen/spacing_small"
     android:layout_marginEnd="@dimen/spacing_medium"
-    app:cardElevation="@dimen/size0"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="@dimen/card_corner_radius"
+    app:cardElevation="@dimen/size0"
     app:cardPreventCornerOverlap="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,23 +26,34 @@
             android:layout_marginStart="@dimen/spacing_small"
             android:background="@drawable/warning_ring"
             android:padding="@dimen/profile_border_thickness"
-            app:layout_constraintBottom_toTopOf="@id/cardLargeButton"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/topGl" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/topGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".1" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/cardTitle"
             android:layout_width="@dimen/size0"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/spacing_small"
-            android:layout_marginTop="@dimen/spacing_large"
             android:textAppearance="?attr/textAppearanceHeadline1"
-            android:translationZ="1dp"
+            android:translationZ="@dimen/size1"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@id/cardLeftImage"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="COMPLETE \nYOUR PROFILE" />
+            app:layout_constraintTop_toBottomOf="@id/topGl"
+            tools:text="COMPLETE " />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/bottomGl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".6" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/cardBodyText"
@@ -52,11 +63,11 @@
             android:layout_marginTop="@dimen/spacing_tiny"
             android:paddingBottom="@dimen/spacing_small"
             android:textAppearance="?attr/textAppearanceBody1"
-            android:translationZ="1dp"
+            android:translationZ="@dimen/size1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/cardLeftImage"
             app:layout_constraintTop_toBottomOf="@id/cardTitle"
-            tools:text="Become a trusted member of the\nkommunity and start interacting" />
+            tools:text="Become a trusted" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/cardSmallButton"
@@ -89,7 +100,7 @@
             app:backgroundTint="@null"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/cardBodyText"
+            app:layout_constraintTop_toBottomOf="@id/bottomGl"
             tools:text="Success!" />
 
         <androidx.constraintlayout.widget.Guideline
@@ -104,9 +115,23 @@
             android:layout_width="@dimen/size0"
             android:layout_height="@dimen/size0"
             android:scaleType="fitEnd"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/gl1"
             app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ProgressBar
+            android:id="@+id/cardProgress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </com.google.android.material.card.MaterialCardView>
